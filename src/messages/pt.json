@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Castelo de Monsaraz (Monsaraz) — Guia do Visitante, História e Vistas",
-    "description": "Guia completo para visitar o Castelo de Monsaraz, a fortaleza medieval no topo da colina do Alentejo com vista para o Alqueva: horários, história, transportes, serviços, meteorologia e locais para fotografar."
+    "title": "Castelo de Monsaraz – Entrada Gratuita, Horários e Visita",
+    "description": "Visite o Castelo de Monsaraz no Alentejo. Saiba mais sobre entrada gratuita, horários, estacionamento, como chegar, história e vistas sobre o Alqueva."
   },
   "header": {
     "gallery": "Galeria",
@@ -23,7 +23,7 @@
     "title": "Castelo de Monsaraz",
     "subtitle": "Aldeia medieval amuralhada · Alentejo, Portugal",
     "rating": "4.7",
-    "reviewCount": "14,967",
+    "reviewCount": "15,081",
     "hours": "Castelo aberto 24 horas",
     "openMaps": "Ver no mapa"
   },
@@ -419,7 +419,7 @@
   },
   "reviews": {
     "title": "O Que Dizem os Visitantes",
-    "declaration": "Os comentários abaixo refletem a opinião de utilizadores do Google Maps (classificação média no topo da página). Este site independente não tem ligação a nenhum negócio ou entidade oficial.",
+    "declaration": "Os comentários abaixo são exemplos representativos do tipo de opiniões que os visitantes partilham sobre o castelo; são resumos editoriais, não citações literais. A classificação média acima é a indicada pelo Google Maps. Este site independente não tem ligação a nenhum negócio ou entidade oficial.",
     "moreReviews": "Ver Mais Comentários no Google Maps",
     "items": [
       {
@@ -524,7 +524,7 @@
   "sources": {
     "title": "Fontes e Leitura Complementar",
     "subtitle": "O conteúdo desta página foi compilado a partir das seguintes fontes oficiais e de referência (maioritariamente em português). Confirme sempre a informação atual junto das entidades oficiais antes de viajar.",
-    "updated": "Conteúdo da página revisto em: 4 de setembro de 2026",
+    "updated": "Conteúdo da página revisto em: 8 de outubro de 2026",
     "items": [
       {
         "name": "Visit Portugal — Castelo de Monsaraz",
@@ -691,5 +691,57 @@
   "officialManagement": {
     "title": "Sobre Este Guia",
     "text": "O Castelo de Monsaraz é um dos patrimónios mais preciosos do Alentejo português. Este guia independente e sem fins lucrativos foi escrito para dar a conhecer a sua história e ajudá-lo a visitá-lo bem preparado. Não vendemos nada e não recomendamos empresas concretas — apenas as fontes oficiais e públicas indicadas no fim da página."
+  },
+  "visitGuide": {
+    "heroTitle": "Visitar o Castelo de Monsaraz",
+    "heroSubtitle": "Entrada gratuita, horários, estacionamento, como chegar e os melhores miradouros — um plano prático para a sua visita.",
+    "updated": "Informação de visita revista em: 8 de outubro de 2026",
+    "intro": "O Castelo de Monsaraz é uma vila amuralhada viva no topo de uma colina do Alentejo, e a maior parte pode ser percorrida livremente a qualquer hora. Esta página aprofunda o guia principal: indicações exatas para quem vai de carro ou de autocarro, onde estacionar, o que cobre realmente o acesso 24 horas e como planear a visita para a melhor luz e o céu mais escuro. Use-a para preparar um dia calmo e sem pressa.",
+    "quickFactsTitle": "Em resumo",
+    "quickFacts": [
+      { "label": "Entrada", "value": "Gratuita — adro, muralhas e ruas da vila" },
+      { "label": "Horário", "value": "Monumento ao ar livre aberto 24 horas" },
+      { "label": "Estacionamento", "value": "Parques gratuitos mesmo abaixo das muralhas" },
+      { "label": "Melhores meses", "value": "Abril–junho e setembro–outubro" },
+      { "label": "Dentro das muralhas", "value": "Íngreme, em calçada, restrito a moradores" }
+    ],
+    "sections": [
+      {
+        "id": "getting-there",
+        "title": "Como Chegar a Monsaraz",
+        "content": "Monsaraz fica a cerca de 15 km de Reguengos de Monsaraz. De carro, a partir de Lisboa, siga pela A2 para sul, depois pela A6 na direção de Évora e continue pela IP2/N18 até Reguengos de Monsaraz, terminando em estradas locais que sobem até à vila; a partir de Faro, conte cerca de 2h30 pela A2/A6. Vindo de Espanha, Badajoz está perto — a A6 e a N256 levam à mesma zona. Os autocarros Rede Expressos ligam Lisboa (Sete Rios) a Évora e a Reguengos de Monsaraz; de Reguengos, um serviço local da Rodoviária do Alentejo ou um táxi cobre os últimos 15 km. Não há posto de abastecimento, multibanco nem supermercado dentro da vila, por isso ateste e levante dinheiro em Reguengos primeiro."
+      },
+      {
+        "id": "free-entry",
+        "title": "Entrada Gratuita — e o Que Cobre",
+        "content": "O acesso ao adro do castelo, às muralhas, às portas históricas e às ruas da vila amuralhada é gratuito e não requer bilhete: por ser uma vila viva, não há portão único nem bilheteira central. Alguns espaços fechados — a torre quando está aberta, a igreja matriz e eventuais exposições temporárias ou pequenos museus — podem ter os seus próprios horários limitados e pequenas entradas fixadas pelas entidades organizadoras. Não há reserva online; basta chegar. Se quiser visitar um interior, pergunte no posto de turismo municipal qual o horário do dia."
+      },
+      {
+        "id": "opening-hours",
+        "title": "Horários e Melhor Época",
+        "content": "O monumento ao ar livre e as ruas da vila estão normalmente acessíveis 24 horas por dia. Os atrativos interiores, como a torre de menagem e a igreja matriz, seguem horários curtos e sazonais que mudam de ano para ano — confirme no local ou no posto de turismo. A primavera e o outono (abril–junho, setembro–outubro) trazem as temperaturas mais agradáveis; julho e agosto são muito quentes, mas perfeitos para os pores do sol tardios; o inverno é calmo e limpo, ideal para observar as estrelas. Os horários também podem mudar em feriados e durante as festas locais."
+      },
+      {
+        "id": "parking",
+        "title": "Estacionamento e Circulação",
+        "content": "Vários parques públicos gratuitos ladeiam as estradas de acesso logo abaixo das muralhas. Circular de carro dentro da vila é reservado a moradores, por isso deixe o carro e entre a pé pelas portas históricas. Em julho, agosto e fins de semana prolongados, os lugares esgotam a meio da manhã — chegue antes das 10h00 ou aceite uma caminhada mais longa. A subida dos parques até à rua principal é curta, mas íngreme, e as ruelas são toda em calçada. As casas de banho públicas dentro da vila são escassas, e o carregamento de carros elétricos e a gasolina mais próximos ficam em Reguengos de Monsaraz."
+      },
+      {
+        "id": "what-to-see",
+        "title": "O Que Ver no Local",
+        "content": "Comece pela porta principal, a Porta da Vila, coroada pela torre do relógio de 1692, e siga a calçada da Rua Direita até ao largo do pelourinho, com a igreja da Misericórdia e os Paços do Concelho. Dentro da igreja matriz de Nossa Senhora da Lagoa procure o túmulo medieval lavrado de Gomes Martins Silvestre. Suba ao adro do castelo e percorra o perímetro das muralhas para o grande panorama sobre a vila, as planícies do Alentejo e o Alqueva, e procure o Forte de São Bento do século XVII mais abaixo. Numa noite limpa, o mesmo adro torna-se um dos miradouros de céu escuro mais acessíveis da reserva Dark Sky Alqueva."
+      }
+    ],
+    "faqTitle": "Perguntas práticas",
+    "faq": [
+      { "q": "A entrada no castelo é mesmo gratuita?", "a": "Sim. O monumento ao ar livre — adro, muralhas, portas e ruas da vila — é de acesso livre e gratuito a qualquer hora. Apenas alguns interiores fechados podem ter as suas próprias entradas pequenas, fixadas pelas entidades organizadoras." },
+      { "q": "Quais são os horários?", "a": "O monumento ao ar livre e as ruas da vila estão normalmente abertos 24 horas por dia. Os espaços interiores, como a torre e a igreja, seguem horários curtos e sazonais que mudam todos os anos; confirme no local ou no posto de turismo municipal." },
+      { "q": "Onde posso estacionar?", "a": "Há parques públicos gratuitos nas estradas logo abaixo das muralhas. Em julho, agosto e fins de semana prolongados, esgotam a meio da manhã, por isso chegue antes das 10h00 ou estacione mais abaixo e suba a pé." },
+      { "q": "Quanto tempo devo reservar?", "a": "Duas a três horas chegam para ver a vila e o castelo com calma. Para juntar o pôr do sol, as estrelas, a margem do Alqueva ou os monumentos megalíticos próximos, planeie um dia inteiro ou uma dormida." },
+      { "q": "Monsaraz é adequada para crianças ou mobilidade reduzida?", "a": "É um espaço público ao ar livre e acolhedor para crianças, mas a vila é íngreme, quase toda em calçada e tem degraus em vários pontos; um transportador de bebé é preferível a um carrinho, e estacionar perto das portas encurta o caminho." },
+      { "q": "Posso visitar à noite para ver estrelas?", "a": "Sim — as áreas ao ar livre estão abertas 24 horas. Leve uma lanterna de luz vermelha e roupa quente mesmo no verão, e desfrute de um dos miradouros mais escuros e acessíveis da reserva Dark Sky Alqueva." }
+    ],
+    "relatedTitle": "Mais neste site",
+    "relatedIntro": "Volte ao guia completo para a história do castelo, os serviços, a meteorologia atual e os melhores locais de fotografia."
   }
 }

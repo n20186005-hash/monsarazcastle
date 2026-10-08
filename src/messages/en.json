@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Monsaraz Castle (Portugal) — Visitor Guide, History & Panoramic Views",
-    "description": "Complete guide to visiting Castelo de Monsaraz, the medieval hilltop fortress of the Alentejo overlooking Lake Alqueva: opening hours, history, transport, facilities, weather and photo spots."
+    "title": "Monsaraz Castle, Portugal – Free Entry, Hours & Visitor Guide",
+    "description": "Plan your visit to Monsaraz Castle in Alentejo. Discover free access, opening information, parking, directions, medieval history and views of Lake Alqueva."
   },
   "header": {
     "gallery": "Gallery",
@@ -23,7 +23,7 @@
     "title": "Monsaraz Castle",
     "subtitle": "Castelo de Monsaraz · Alentejo, Portugal",
     "rating": "4.7",
-    "reviewCount": "14,967",
+    "reviewCount": "15,081",
     "hours": "Castle open 24 hours",
     "openMaps": "View on Map"
   },
@@ -419,7 +419,7 @@
   },
   "reviews": {
     "title": "What Visitors Say",
-    "declaration": "The reviews below reflect the opinions of Google Maps users (average rating shown in the header). This independent website is not affiliated with any business or official body.",
+    "declaration": "The comments below are representative examples of the kind of visitor feedback people share about the castle; they are editorial summaries, not verbatim quotes. The average rating shown above is the rating reported by Google Maps. This independent website is not affiliated with any business or official body.",
     "moreReviews": "Read More Reviews on Google Maps",
     "items": [
       {
@@ -524,7 +524,7 @@
   "sources": {
     "title": "Sources & Further Reading",
     "subtitle": "Content on this page has been compiled from the following official and reference sources (mostly in Portuguese). Always confirm current information with the official bodies before travelling.",
-    "updated": "Page content reviewed: 4 September 2026",
+    "updated": "Page content reviewed: 8 October 2026",
     "items": [
       {
         "name": "Visit Portugal — Castelo de Monsaraz",
@@ -691,5 +691,57 @@
   "officialManagement": {
     "title": "About This Guide",
     "text": "Monsaraz Castle is one of the most precious historical sites of the Portuguese Alentejo. This independent, non-profit guide was written to share its history and to help you visit it well prepared. We do not sell anything and we do not recommend specific businesses — only the official and public sources listed at the bottom of the page."
+  },
+  "visitGuide": {
+    "heroTitle": "Visiting Monsaraz Castle",
+    "heroSubtitle": "Free entry, opening hours, parking, directions and the best viewpoints — a practical plan for your trip.",
+    "updated": "Visitor information reviewed: 8 October 2026",
+    "intro": "Monsaraz Castle is a living walled village on a hilltop in the Alentejo, and most of it is free to wander at any time. This page goes further than the main guide: exact directions for drivers and bus travellers, where to park, what the 24-hour access really covers, and how to time your visit for the best light and the darkest sky. Use it to plan a calm, unhurried day.",
+    "quickFactsTitle": "At a glance",
+    "quickFacts": [
+      { "label": "Entry", "value": "Free — esplanade, walls and village streets" },
+      { "label": "Opening", "value": "Outdoor monument open 24 hours a day" },
+      { "label": "Parking", "value": "Free car parks just below the walls" },
+      { "label": "Best months", "value": "April–June and September–October" },
+      { "label": "Inside the walls", "value": "Steep, cobbled, car-free for residents" }
+    ],
+    "sections": [
+      {
+        "id": "getting-there",
+        "title": "How to Get to Monsaraz",
+        "content": "Monsaraz sits about 15 km from Reguengos de Monsaraz. By car from Lisbon, take the A2 south, then the A6 towards Évora and continue on the IP2/N18 to Reguengos de Monsaraz, finishing on local roads that climb to the village; from Faro, plan roughly 2.5 hours via the A2/A6. From Spain, Badajoz is close — the A6 and N256 bring you to the same area. Rede Expressos buses connect Lisbon (Sete Rios) with Évora and Reguengos de Monsaraz; from Reguengos a local Rodoviária do Alentejo service or a taxi covers the last 15 km. There is no fuel station, ATM or supermarket inside the village, so fill up and withdraw cash in Reguengos first."
+      },
+      {
+        "id": "free-entry",
+        "title": "Free Entry — and What It Covers",
+        "content": "Access to the castle esplanade, the walls, the historic gates and the streets of the walled village is free of charge and requires no ticket: as a lived-in village, there is no single gate or ticket office. Some enclosed spaces — the keep when it is open, the parish church and any temporary exhibitions or small museums — may have their own limited schedules and small charges set by the organising bodies. There is no online booking; you simply arrive. If you particularly want to see an interior, ask at the municipal tourism office about that day's opening."
+      },
+      {
+        "id": "opening-hours",
+        "title": "Opening Hours & Best Time",
+        "content": "The outdoor monument and the village streets are normally accessible 24 hours a day. Interior attractions such as the keep and the parish church follow short, seasonal schedules that change from year to year — confirm on the spot or with the tourism office. Spring and autumn (April–June, September–October) bring the most pleasant temperatures; July and August are very hot but perfect for late sunsets; winter is quiet and clear, ideal for stargazing. Schedules can also shift on public holidays and during local festivals."
+      },
+      {
+        "id": "parking",
+        "title": "Parking & Getting Around",
+        "content": "Several free public car parks line the approach roads just below the walls. Driving inside the village is restricted to residents, so leave the car and walk in through the historic gates. In July, August and on holiday weekends the spaces fill up by mid-morning — arrive before 10:00 or accept a longer walk. The climb from the car parks to the main street is short but steep, and the lanes are all cobblestones. Public toilets inside the village are scarce, and the nearest EV charging and fuel are in Reguengos de Monsaraz."
+      },
+      {
+        "id": "what-to-see",
+        "title": "What to See on Site",
+        "content": "Start at the main gate, the Porta da Vila, crowned by its 1692 clock tower, and follow the cobbled Rua Direita to the pillory square with the Misericórdia church and the town hall. Inside the parish church of Nossa Senhora da Lagoa look for the carved medieval tomb of Gomes Martins Silvestre. Climb to the castle esplanade and walk the perimeter of the walls for the great panorama over the village, the Alentejo plains and Lake Alqueva, and look out for the 17th-century Forte de São Bento below. On a clear night the same esplanade becomes one of the easiest dark-sky viewpoints in the Alqueva reserve."
+      }
+    ],
+    "faqTitle": "Practical questions",
+    "faq": [
+      { "q": "Is entry to the castle really free?", "a": "Yes. The outdoor monument — esplanade, walls, gates and village streets — is free to visit at any time. Only some enclosed interiors may have their own small charges set by the organisers." },
+      { "q": "What are the opening hours?", "a": "The outdoor monument and village streets are normally open 24 hours a day. Interior spaces such as the keep and the church follow short seasonal schedules that change yearly; confirm locally or with the municipal tourism office." },
+      { "q": "Where can I park?", "a": "Free public car parks line the roads just below the walls. In July, August and on holiday weekends they fill by mid-morning, so arrive before 10:00 or park lower and walk up." },
+      { "q": "How long should I plan for a visit?", "a": "Two to three hours cover the village and the castle at a relaxed pace. To add sunset, stargazing, the Alqueva lakeshore or the nearby megalithic sites, plan a full day or an overnight stay." },
+      { "q": "Is Monsaraz suitable for children or limited mobility?", "a": "It is an open-air public space and welcoming for children, but the village is steep, almost entirely cobbled and has steps in places; a carrier is preferable to a buggy, and parking close to the gates shortens the walk." },
+      { "q": "Can I visit at night for stargazing?", "a": "Yes — the outdoor areas are open 24 hours. Bring a red-light torch and a warm layer even in summer, and enjoy one of the darkest, most accessible viewpoints of the Dark Sky Alqueva reserve." }
+    ],
+    "relatedTitle": "More on this site",
+    "relatedIntro": "Back to the full guide for the castle's history, facilities, current weather and the best photo spots."
   }
 }

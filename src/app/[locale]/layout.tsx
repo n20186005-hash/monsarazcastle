@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import type { Metadata, Viewport } from 'next';
 
-const baseUrl = 'https://monsarazcastle.com';
-const CONTENT_UPDATED = '2026-09-04';
+const baseUrl = 'https://www.monsarazcastle.com';
+const CONTENT_UPDATED = '2026-10-08';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -190,7 +190,7 @@ export default async function LocaleLayout({
           '@type': 'AggregateRating',
           ratingValue: '4.7',
           bestRating: '5',
-          reviewCount: '14967',
+          reviewCount: '15081',
         },
         sameAs: [
           'https://maps.app.goo.gl/wPN3d4exqLmb8N7M8',

@@ -12,6 +12,12 @@ export const routing = defineRouting({
     '/privacy-policy': '/privacy-policy',
     '/terms-of-service': '/terms-of-service',
     '/cookie-settings': '/cookie-settings',
+    '/visit-guide': {
+      en: '/visit-monsaraz-castle',
+      pt: '/visitar-castelo-de-monsaraz',
+      zh: '/visit-monsaraz-castle',
+      mwl: '/visitar-castelo-de-monsaraz',
+    },
   },
 });
 

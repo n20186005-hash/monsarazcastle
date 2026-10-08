@@ -23,7 +23,7 @@
     "title": "Castielho de Monsaraz",
     "subtitle": "Bila mediebal amuralhada · Alentejo, Pertual",
     "rating": "4.7",
-    "reviewCount": "14,967",
+    "reviewCount": "15,081",
     "hours": "Castielho abierto 24 horas",
     "openMaps": "Ber ne l mapa"
   },
@@ -419,7 +419,7 @@
   },
   "reviews": {
     "title": "L Que Dízen ls Bejitantes",
-    "declaration": "Ls comentairos ambaixo refletén la oupinion de outelizadores de l Google Maps (classeficaçon média ne l topo de la páigina). Este sítio andependiente nun ten lhigaçon a nanhun negócio ó antidade oufecial.",
+    "declaration": "Ls comentairos ambaixo son eisemplos repersentatibos de l tipo de oupenion que ls bisitantes partilhan subre l castielho; son resume eiditoriales, nun citaçones lhiterales. La classeficaçon média arriba ye la andicada pul Google Maps. Este sítio andependiente nun ten lhigaçon a nanhun negócio ó antidade oufecial.",
     "moreReviews": "Ber Mais Comentairos ne l Google Maps",
     "items": [
       {
@@ -524,7 +524,7 @@
   "sources": {
     "title": "Fuontes i Lheituras Cumplementares",
     "subtitle": "L cuntenido desta páigina fui cumpilado a partir de las seguintes fuontes oufeciales i de referéncia (maioritariamente an pertués). Cunfirme siempre la anformaçon atual junto de las antidades oufeciales antes de bieijar.",
-    "updated": "Cuntenido de la páigina rebisto an: 4 de setembre de 2026",
+    "updated": "Cuntenido de la páigina rebisto an: 8 de outubre de 2026",
     "items": [
       {
         "name": "Bisit Pertual — Castielho de Monsaraz",
@@ -691,5 +691,57 @@
   "officialManagement": {
     "title": "Subre Este Guia",
     "text": "L Castielho de Monsaraz ye un de ls patrimonhos mais preciosos de l Alentejo pertués. Este guia andependiente i sin fines comerciales fui screbido pa dar a coincer la sue stória i ajudar a besitá-lo bien preparado. Nun benemos nada i nun recomendamos ampresas cuncretas — solo las fuontes oufeciales i públicas andicadas ne l fin de la páigina."
+  },
+  "visitGuide": {
+    "heroTitle": "Besitar l Castielho de Monsaraz",
+    "heroSubtitle": "Entrada gratuita, horários, stacionamiento, cumo chegar i ls melhores miradouros — un pleno prático pa la sue besita.",
+    "updated": "Anformaçon de besita rebista an: 8 de outubre de 2026",
+    "intro": "L Castielho de Monsaraz ye ua bila amuralhada biba ne l cimo de ua colina de l Alanteijo, i la maior parte puode ser percorrida lhibremente a qualquiera hora. Esta páigina aprofunda l guia percipal: andicaçones exatas pa quien ba de carro ó de outocarro, adonde stacionar, l que cobre rialmente l'acesso 24 horas i cumo planear la besita pa la melhor luç i l céu mais scuro. Outeliza-la pa preparar un dia calmo i sin pressa.",
+    "quickFactsTitle": "An resumo",
+    "quickFacts": [
+      { "label": "Entrada", "value": "Gratuita — adro, muralhas i rues de la bila" },
+      { "label": "Horário", "value": "Monumento al aire lhibre abierto 24 horas" },
+      { "label": "Stacionamiento", "value": "Parques gratuitos mesmo ambaixo de las muralhas" },
+      { "label": "Melhores meses", "value": "Abril–junho i setembre–outubre" },
+      { "label": "Dentro de las muralhas", "value": "Íngreme, an calçada, restrito a moradores" }
+    ],
+    "sections": [
+      {
+        "id": "getting-there",
+        "title": "Cumo Chegar a Monsaraz",
+        "content": "Monsaraz queda a cerca de 15 km de Reguengos de Monsaraz. De carro, a partir de Lisboua, siga pula A2 pa sul, depuis pula A6 na direçon de Ébora i cuntine pula IP2/N18 até Reguengos de Monsaraz, treminando an stradas locales que sobén até a bila; a partir de Faro, cuonte cerca de 2h30 pula A2/A6. Bendo de Spanha, Badajoz stá cerca — la A6 i la N256 llebán a la mesma zona. Ls outocarros Rede Spressos lhígan Lisboua (Sete Rius) a Ébora i a Reguengos de Monsaraz; de Reguengos, un serbício local de la Rodobiária de l Alanteijo ó un táxi cobren ls redadeiros 15 km. Nun hai posto de abastecimiento, multibanco nin supermercado dentre de la bila, por esso ateste i lhebante dinheiro an Reguengos purmeiro."
+      },
+      {
+        "id": "free-entry",
+        "title": "Entrada Gratuita — i l Que Cobre",
+        "content": "L'acesso al adro de l castielho, a las muralhas, a las puortas stóricas i a las rues de la bila amuralhada ye gratuito i nun requer bilhete: por ser ua bila biba, nun hai puorta única nin bilheteira central. Alguns spaços cerrados — la torre quando stá abierta, la eigreija matriç i eibentuales sposiçones temporárias ó pequeinhos museus — puoden tener ls sous própios horários lhemitados i pequeinhas entradas fixadas pulas entidades ourganizadoras. Nun hai reserva online; basta chegar. Se quier besitar un anterior, pregunte ne l posto de turismo municipal qual l'horário de l dia."
+      },
+      {
+        "id": "opening-hours",
+        "title": "Horários i Melhor Época",
+        "content": "L monumento al aire lhibre i las rues de la bila stan normalmente acessibles 24 horas por dia. Ls atratibos anteriores, cumo la torre de menaige i la eigreija matriç, síguen horários curtos i sazonales que mudan de anho para anho — cunfirme ne l local ó ne l posto de turismo. La primabera i l'outonho (abril–junho, setembre–outubre) lhéban las temperaturas mais agradables; júlio i agosto son mui calientes, mas perfeitos pa ls pores de sol tardios; l'amboerno ye calmo i lhibre, eideal pa ouserbar las strelhas. Ls horários tamien puoden mudar an feriados i durante las festas locales."
+      },
+      {
+        "id": "parking",
+        "title": "Stacionamiento i Circulaçon",
+        "content": "Bários parques públicos gratuitos lhadean las stradas de acesso lhogo ambaixo de las muralhas. Circular de carro dentre de la bila ye reservado a moradores, por esso deixe l carro i antre a pie pulas puortas stóricas. An júlio, agosto i fines de sumana prolongados, ls lugares esgotan a meio de la manhan — chegue antes de las 10h00 ó aceite ua caminaia mais lhonga. La subida de ls parques até a rua percipal ye curta, mas íngreme, i las ruelas son toda an calçada. Las casas de banho públicas dentre de la bila son escassas, i l carregamiento de carros eilétricos i la gasolina mais próssimos quédan an Reguengos de Monsaraz."
+      },
+      {
+        "id": "what-to-see",
+        "title": "L Que Ber ne l Local",
+        "content": "Comece pula puorta percipal, la Puorta de la Bila, coroada pula torre de l relógio de 1692, i siga la calçada de la Rua Dreita até l lhargo de l pelourinho, cula eigreija de la Misericórdia i ls Paços de l Cunceilho. Dentro de la eigreija matriç de Nossa Senhora de la Lagoa procure l túmulo medieval lhavrado de Gomes Martins Silbestre. Suba al adro de l castielho i percorra l perímetro de las muralhas pa l grande panarama subre la bila, las planícies de l Alanteijo i l Alqueba, i procure l Forte de São Bento de l século XVII mais ambaixo. Nua nuite lhibre, l mesmo adro torna-se un de ls miradouros de céu scuro mais acessibles de la reserva Dark Sky Alqueba."
+      }
+    ],
+    "faqTitle": "Perguntas práticas",
+    "faq": [
+      { "q": "La entrada ne l castielho ye mesmo gratuita?", "a": "Si. L monumento al aire lhibre — adro, muralhas, puortas i rues de la bila — ye de acesso lhibre i gratuito a qualquiera hora. Solo alguns anteriores cerrados puoden tener las suas própias entradas pequeinhas, fixadas pulas entidades ourganizadoras." },
+      { "q": "Quales son ls horários?", "a": "L monumento al aire lhibre i las rues de la bila stan normalmente abiertos 24 horas por dia. Ls spaços anteriores, cumo la torre i la eigreija, síguen horários curtos i sazonales que mudan todos ls anhos; cunfirme ne l local ó ne l posto de turismo municipal." },
+      { "q": "Adonde posso stacionar?", "a": "Hai parques públicos gratuitos nas stradas lhogo ambaixo de las muralhas. An júlio, agosto i fines de sumana prolongados, esgotan a meio de la manhan, por esso chegue antes de las 10h00 ó stacione mais ambaixo i suba a pie." },
+      { "q": "Quanto tiempo debo reserbar?", "a": "Duas a trés horas chegan para ber la bila i l castielho cun calma. Para juntar l pó de sol, las strelhas, la marge de l Alqueba ó ls monumentos megalíticos próssimos, planeie un dia anteiro ó ua dormida." },
+      { "q": "Monsaraz ye adequado pa crianças ó mobilidade reduzida?", "a": "Ye un spácio público al aire lhibre i acolhedor pa crianças, mas la bila ye íngreme, quaije toda an calçada i ten degraus an bários puntos; un transportador de bebé ye preferible a un carrino, i stacionar cerqu' de las puortas ancurta l camino." },
+      { "q": "Posso besitar a nuite pa ber strelhas?", "a": "Si — las árias al aire lhibre stan abiertas 24 horas. Lhebe ua lhanterne de luç burmeilha i roupa quente mesmo ne l berano, i çfrute de un de ls miradouros mais scuros i acessibles de la reserva Dark Sky Alqueba." }
+    ],
+    "relatedTitle": "Mais neste site",
+    "relatedIntro": "Bolte al guia cumpleto para la stória de l castielho, ls serbícios, la meteorologie atual i ls melhores locales de fotografie."
   }
 }

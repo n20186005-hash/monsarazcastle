@@ -2,10 +2,18 @@
 
 import { useTranslations, useMessages, useLocale } from 'next-intl';
 
+const visitGuideHref: Record<string, string> = {
+  en: '/en/visit-monsaraz-castle',
+  pt: '/pt/visitar-castelo-de-monsaraz',
+  zh: '/zh/visit-monsaraz-castle',
+  mwl: '/mwl/visitar-castelo-de-monsaraz',
+};
+
 export default function Intro() {
   const t = useTranslations('intro');
   const tHero = useTranslations('hero');
   const tOff = useTranslations('officialManagement');
+  const tVisit = useTranslations('visitGuide');
   const messages = useMessages() as any;
   const locale = useLocale();
   const items: string[] = messages?.intro?.visitGuide?.items || [];
@@ -107,6 +115,18 @@ export default function Intro() {
             {tOff('text')}
           </div>
         </div>
+
+        <a
+          href={visitGuideHref[locale] || visitGuideHref.pt}
+          className="mt-8 inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-colors"
+          style={{ background: 'var(--accent)', color: '#fff' }}
+        >
+          {tVisit('heroTitle')}
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+            <line x1="5" y1="12" x2="19" y2="12" />
+            <polyline points="12 5 19 12 12 19" />
+          </svg>
+        </a>
       </div>
     </section>
   );

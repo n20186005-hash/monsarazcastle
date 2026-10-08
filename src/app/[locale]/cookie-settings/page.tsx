@@ -8,7 +8,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const baseUrl = 'https://monsarazcastle.com';
+  const baseUrl = 'https://www.monsarazcastle.com';
   const ptUrl = `${baseUrl}/pt/cookie-settings`;
   const enUrl = `${baseUrl}/en/cookie-settings`;
   const zhUrl = `${baseUrl}/zh/cookie-settings`;
@@ -22,6 +22,7 @@ export async function generateMetadata({
   const selfUrl = localeUrls[locale] || ptUrl;
 
   return {
+    robots: { index: false, follow: true },
     alternates: {
       canonical: selfUrl,
       languages: {
