@@ -59,14 +59,14 @@ export default function Header() {
               className="text-sm font-medium transition-colors"
               style={{ color: key === 'explore' ? 'var(--accent)' : scrolled ? 'var(--text-secondary)' : 'rgba(255,255,255,0.85)' }}
             >
-              {key === 'explore' ? (locale === 'zh' ? '探索蒙萨拉兹' : locale === 'pt' ? 'Explorar Monsaraz' : locale === 'mwl' ? 'Descobrir Monsaraz' : 'Explore Monsaraz') : t(key)}
+              {key === 'explore' ? (locale === 'zh' ? '周边景点' : locale === 'pt' ? 'Atrações Próximas' : locale === 'mwl' ? 'Lhugares Pertico' : 'Nearby Attractions') : t(key)}
             </a>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
           <a href="/en/explore" className="lg:hidden text-xs sm:text-sm font-semibold rounded-md px-3 py-2 whitespace-nowrap" style={{background:'var(--accent)',color:'#fff'}}>
-            {locale === 'zh' ? '周边游览' : locale === 'pt' ? 'Explorar' : locale === 'mwl' ? 'Descobrir' : 'Explore'}
+            {locale === 'zh' ? '周边景点' : locale === 'pt' ? 'Atrações' : locale === 'mwl' ? 'Lhugares' : 'Nearby'}
           </a>
           <ThemeToggle />
           <LanguageToggle />
