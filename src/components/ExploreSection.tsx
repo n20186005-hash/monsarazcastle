@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { entries } from '@/lib/explore';
 
 const textByLocale: Record<string, {eyebrow:string;title:string;intro:string;all:string;language:string}> = {
   en: {eyebrow:'BEYOND THE CASTLE',title:'Explore Monsaraz & Lake Alqueva',intro:'Continue your visit with 31 detailed guides to nearby monuments, prehistoric stones, lakeside experiences, local crafts and practical itineraries.',all:'View all 31 visitor guides',language:''},
@@ -17,6 +18,14 @@ const featured = [
   {slug:'monsaraz-one-day-itinerary',image:'/gallery/monsaraz-castle-4.jpg',en:'One-Day Itinerary',pt:'Roteiro de Um Dia',zh:'蒙萨拉什一日游',mwl:'Percurso dun Die'},
 ];
 
+const categories = ['Heritage','Megaliths','Lake & nature','Culture & food','Planning'] as const;
+const categoryNames: Record<string,Record<string,string>> = {
+  en: {Heritage:'Historic sites',Megaliths:'Prehistoric monuments','Lake & nature':'Lake & nature','Culture & food':'Local culture & food',Planning:'Plan your visit'},
+  pt: {Heritage:'Património',Megaliths:'Megalitismo','Lake & nature':'Lago e natureza','Culture & food':'Cultura e gastronomia',Planning:'Planear a visita'},
+  zh: {Heritage:'历史古迹',Megaliths:'史前巨石遗址','Lake & nature':'湖泊与自然','Culture & food':'文化与美食',Planning:'行程与实用指南'},
+  mwl: {Heritage:'Património',Megaliths:'Megalitos','Lake & nature':'Lago i natureza','Culture & food':'Cultura i cumida',Planning:'Planear la bisita'},
+};
+
 export default function ExploreSection({locale}:{locale:string}) {
   const t=textByLocale[locale]||textByLocale.en;
   return <section id="explore" className="py-16 sm:py-24 px-4 sm:px-6" style={{background:'var(--bg-primary)'}}>
@@ -29,6 +38,16 @@ export default function ExploreSection({locale}:{locale:string}) {
           <div className="relative aspect-[4/3]"><Image src={item.image} alt={item.en} fill sizes="(max-width: 640px) 50vw, 33vw" className="object-cover"/></div>
           <div className="p-4 flex items-center justify-between gap-2"><h3 className="font-semibold text-sm sm:text-base" style={{color:'var(--text-primary)'}}>{item[locale as keyof typeof item]||item.en}</h3><span aria-hidden="true" style={{color:'var(--accent)'}}>→</span></div>
         </Link>)}
+      </div>
+      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5" aria-label="All nearby visitor guides">
+        {categories.map(category=><div key={category} className="rounded-xl p-5" style={{background:'var(--bg-tertiary)',border:'1px solid var(--border-color)'}}>
+          <h3 className="font-display font-semibold text-lg mb-4" style={{color:'var(--text-primary)'}}>{(categoryNames[locale]||categoryNames.en)[category]}</h3>
+          <ul className="space-y-3">
+            {entries.filter(entry=>entry.category===category).map(entry=><li key={entry.slug}>
+              <Link href={`/en/explore/${entry.slug}`} className="text-sm leading-relaxed hover:underline inline-flex gap-2" style={{color:'var(--accent)'}}><span aria-hidden="true">›</span>{entry.title}</Link>
+            </li>)}
+          </ul>
+        </div>)}
       </div>
       <div className="mt-9 flex flex-wrap items-center gap-4">
         <Link href="/en/explore" className="inline-flex items-center rounded-lg px-6 py-3 text-white font-semibold transition-opacity hover:opacity-90" style={{background:'var(--accent)'}}>{t.all} →</Link>
