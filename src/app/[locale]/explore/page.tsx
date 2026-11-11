@@ -5,7 +5,8 @@ import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
   title: 'Explore Monsaraz: Attractions, Routes & Visitor Guides',
-  description: 'Discover 30 detailed guides to Monsaraz historic sights, Alqueva viewpoints, megalithic sites, local crafts and practical travel plans.',
+  description: 'Discover 31 detailed guides to Monsaraz historic sights, Alqueva viewpoints, megalithic sites, local crafts and practical travel plans.',
+  alternates: {canonical:'https://www.monsarazcastle.com/en/explore'},
 };
 
 export default async function ExploreIndex({params}: {params: Promise<{locale:string}>}) {

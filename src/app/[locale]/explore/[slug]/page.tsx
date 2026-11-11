@@ -26,7 +26,9 @@ export async function generateMetadata({params}: {params:Promise<{locale:string;
   const {locale,slug}=await params;
   const e=entries.find(e=>e.slug===slug);
   if(!e) return {};
-  return {title:`${e.title} | Monsaraz Travel Guide`,description:e.lead,alternates:{canonical:`${base}/en/explore/${slug}`},openGraph:{title:e.title,description:e.lead,url:`${base}/en/explore/${slug}`,images:[`${base}/gallery/monsaraz-castle-1.jpg`]}};
+  const dedicatedPhoto=existsSync(join(process.cwd(),'public','explore',slug+'.jpg'));
+  const image=dedicatedPhoto?`/explore/${slug}.jpg`:`/gallery/monsaraz-castle-${routePhoto[slug]||1}.jpg`;
+  return {title:`${e.title} | Monsaraz Travel Guide`,description:e.lead,alternates:{canonical:`${base}/en/explore/${slug}`},openGraph:{title:e.title,description:e.lead,url:`${base}/en/explore/${slug}`,images:[{url:`${base}${image}`,alt:e.title}]}};
 }
 
 export default async function ExploreArticle({params}: {params:Promise<{locale:string;slug:string}>}) {
@@ -44,9 +46,10 @@ export default async function ExploreArticle({params}: {params:Promise<{locale:s
     {q:`Is ${e.title} worth including in a Monsaraz trip?`,a:`Yes if you are interested in ${e.category.toLowerCase()}. ${e.lead} ${e.experience}`},
     {q:`How should I plan a visit to ${e.title}?`,a:e.practical},
     {q:`What can I combine with ${e.title}?`,a:e.route},
+    {q:`Where are the best views or details at ${e.title}?`,a:detail.photo},
   ];
   const structured={'@context':'https://schema.org','@graph':[
-    {'@type':'TouristAttraction',name:e.title,description:e.lead,url:selfUrl,containedInPlace:{'@type':'Place',name:'Reguengos de Monsaraz, Alentejo, Portugal'}},
+    {'@type':e.category==='Planning'||e.slug==='what-to-eat-monsaraz'?'WebPage':'TouristAttraction',name:e.title,description:e.lead,url:selfUrl,...(e.category==='Planning'||e.slug==='what-to-eat-monsaraz'?{}:{containedInPlace:{'@type':'Place',name:'Reguengos de Monsaraz, Alentejo, Portugal'}})},
     {'@type':'BreadcrumbList',itemListElement:[{ '@type':'ListItem',position:1,name:'Monsaraz Castle',item:`${base}/${locale}`},{'@type':'ListItem',position:2,name:'Explore Monsaraz',item:`${base}/${locale}/explore`},{'@type':'ListItem',position:3,name:e.title,item:selfUrl}]},
     {'@type':'FAQPage',mainEntity:faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))}
   ]};
