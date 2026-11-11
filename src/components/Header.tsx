@@ -25,6 +25,7 @@ export default function Header() {
   }, []);
 
   const navItems = [
+    { key: 'explore', id: 'explore' },
     { key: 'facilities', id: 'facilities' },
     { key: 'stories', id: 'stories' },
     { key: 'gallery', id: 'gallery' },
@@ -58,7 +59,7 @@ export default function Header() {
               className="text-sm font-medium transition-colors"
               style={{ color: scrolled ? 'var(--text-secondary)' : 'rgba(255,255,255,0.85)' }}
             >
-              {t(key)}
+              {key === 'explore' ? (locale === 'zh' ? '周边攻略' : locale === 'pt' ? 'Explorar' : locale === 'mwl' ? 'Descobrir' : 'Explore') : t(key)}
             </a>
           ))}
         </nav>

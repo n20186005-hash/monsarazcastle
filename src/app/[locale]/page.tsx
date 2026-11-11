@@ -20,6 +20,7 @@ import FAQSection from '@/components/FAQSection';
 import SourcesSection from '@/components/SourcesSection';
 import MapEmbed from '@/components/MapEmbed';
 import Footer from '@/components/Footer';
+import ExploreSection from '@/components/ExploreSection';
 
 export default async function HomePage({
   params,
@@ -35,6 +36,7 @@ export default async function HomePage({
       <main>
         <Hero />
         <Intro />
+        <ExploreSection locale={locale} />
         <BasicInfo />
         <HoursSection />
         <TicketsSection />
