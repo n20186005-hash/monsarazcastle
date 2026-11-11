@@ -12,6 +12,8 @@ export const routing = defineRouting({
     '/privacy-policy': '/privacy-policy',
     '/terms-of-service': '/terms-of-service',
     '/cookie-settings': '/cookie-settings',
+    '/explore': '/explore',
+    '/explore/[slug]': '/explore/[slug]',
     '/visit-guide': {
       en: '/visit-monsaraz-castle',
       pt: '/visitar-castelo-de-monsaraz',
