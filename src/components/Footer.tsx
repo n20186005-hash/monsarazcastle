@@ -70,6 +70,12 @@ export default function Footer() {
           <p>{t('rights')}</p>
           <p className="text-xs max-w-3xl mx-auto leading-relaxed">{t('disclaimer')}</p>
           <p className="text-xs max-w-3xl mx-auto leading-relaxed">{t('photoCredit')}</p>
+          <p className="text-xs max-w-3xl mx-auto leading-relaxed">
+            如需本網站技術支援，請聯繫：{' '}
+            <a href="mailto:laupetter72@gmail.com" className="hover:underline" style={{ color: 'var(--accent)' }}>
+              laupetter72@gmail.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>
