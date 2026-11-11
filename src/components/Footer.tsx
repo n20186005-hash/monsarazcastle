@@ -20,6 +20,14 @@ export default function Footer() {
   const brand = brandByLocale[locale] || 'Monsaraz Castle';
   const prefix = `/${locale}`;
 
+  const supportText: Record<string, string> = {
+    pt: 'Para suporte técnico do website, contacte:',
+    en: 'For website technical support, contact:',
+    zh: '如需本网站技术支援，请联系：',
+    mwl: 'Para suporte técnico de l sítio, contacte:',
+  };
+  const support = supportText[locale] || supportText.en;
+
   return (
     <footer
       className="py-12 px-4 sm:px-6"
@@ -50,7 +58,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="flex flex-wrap gap-4 text-sm mt-4 sm:mt-0">
-            <a href={`${prefix}/explore`} style={{ color: 'var(--text-secondary)' }} className="hover:underline">Explore Monsaraz</a>
+            <a href={`${prefix}/explore`} style={{ color: 'var(--text-secondary)' }} className="hover:underline">{t('explore')}</a>
             <a href={`${prefix}/privacy-policy`} style={{ color: 'var(--text-secondary)' }} className="hover:underline">
               {t('privacy')}
             </a>
@@ -71,7 +79,7 @@ export default function Footer() {
           <p className="text-xs max-w-3xl mx-auto leading-relaxed">{t('disclaimer')}</p>
           <p className="text-xs max-w-3xl mx-auto leading-relaxed">{t('photoCredit')}</p>
           <p className="text-xs max-w-3xl mx-auto leading-relaxed">
-            如需本網站技術支援，請聯繫：{' '}
+            {support}{' '}
             <a href="mailto:laupetter72@gmail.com" aria-label="Technical support email" className="hover:underline" style={{ color: 'var(--accent)' }}>
               laupetter72@gmail.com
             </a>
