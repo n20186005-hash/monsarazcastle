@@ -4,8 +4,20 @@ import { notFound } from 'next/navigation';
 import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import { entries } from '@/lib/explore';
+import { details } from '@/lib/explore-details';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 
 const base = 'https://www.monsarazcastle.com';
+const routePhoto:Record<string,number> = {
+  'monsaraz-half-day-itinerary':15,
+  'monsaraz-one-day-itinerary':4,
+  'monsaraz-from-evora':8,
+  'monsaraz-parking':6,
+  'monsaraz-photography':20,
+  'monsaraz-accessibility':14,
+  'monsaraz-with-children':18,
+};
 export function generateStaticParams() { return entries.map(e=>({locale:'en',slug:e.slug})); }
 
 export async function generateMetadata({params}: {params:Promise<{locale:string;slug:string}>}):Promise<Metadata> {
@@ -20,6 +32,9 @@ export default async function ExploreArticle({params}: {params:Promise<{locale:s
   if (locale !== 'en') redirect(`/en/explore/${slug}`);
   const e=entries.find(e=>e.slug===slug);
   if(!e) notFound();
+  const detail=details[e.slug];
+  const dedicatedPhoto=existsSync(join(process.cwd(),'public','explore',e.slug+'.jpg'));
+  const photoSrc=dedicatedPhoto?`/explore/${e.slug}.jpg`:`/gallery/monsaraz-castle-${routePhoto[e.slug]||1}.jpg`;
   const related=entries.filter(x=>x.category===e.category&&x.slug!==slug).slice(0,3);
   const selfUrl=`${base}/${locale}/explore/${slug}`;
   const faq=[
@@ -39,12 +54,16 @@ export default async function ExploreArticle({params}: {params:Promise<{locale:s
     <h1 className="font-display text-4xl sm:text-5xl font-bold mt-3 leading-tight">{e.title}</h1>
     <p className="text-xl leading-relaxed mt-5" style={{color:'var(--text-secondary)'}}>{e.lead}</p>
     <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.mapQuery)}`} target="_blank" rel="noopener noreferrer" className="inline-flex mt-6 px-5 py-3 rounded-lg font-semibold text-white" style={{background:'var(--accent)'}}>View this place on Google Maps ↗</a>
-    <figure className="mt-10"><Image src="/gallery/monsaraz-castle-1.jpg" alt="Monsaraz Castle and the surrounding Alentejo landscape — regional context photograph" width={1600} height={1200} className="w-full h-auto max-h-[420px] object-cover rounded-2xl"/><figcaption className="text-xs mt-2" style={{color:'var(--text-muted)'}}>Monsaraz Castle and regional landscape. Context photograph; it does not necessarily depict the specific attraction described.</figcaption></figure>
+    <figure className="mt-10"><Image src={photoSrc} alt={dedicatedPhoto?`Real photograph illustrating ${e.title} in Alentejo, Portugal`:'Monsaraz Castle — real photograph illustrating this visitor itinerary'} width={1000} height={750} className="w-full h-auto max-h-[520px] object-cover rounded-2xl"/><figcaption className="text-xs mt-2" style={{color:'var(--text-muted)'}}>{dedicatedPhoto?`${e.title} · relevant real-location photograph`:'Monsaraz Castle · real photograph of a route landmark'}</figcaption></figure>
     <section className="rounded-xl p-6 mt-10" style={{background:'var(--bg-tertiary)',border:'1px solid var(--border-color)'}}><h2 className="font-display text-2xl font-semibold">About {e.title}</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>{e.background}</p><p className="mt-4 text-sm" style={{color:'var(--text-muted)'}}>Local heritage and visitor facilities fall under the relevant municipal, parish, heritage or individual site operators. For site-specific access and management information, consult the municipality of Reguengos de Monsaraz or the venue directly.</p></section>
     <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Highlights and what to notice</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>{e.experience}</p></section>
+    <section className="mt-12"><h2 className="font-display text-2xl font-semibold">History, design and distinctive features</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>{detail.architecture}</p><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>The setting is part of the story: compare this stop with the fortified village of Monsaraz and the countryside beyond. The relationship between the buildings, paths and terrain often reveals more than a quick photograph of a single landmark.</p></section>
+    <section className="mt-12 grid sm:grid-cols-2 gap-4"><div className="rounded-xl p-5" style={{background:'var(--bg-tertiary)'}}><h2 className="font-display text-xl font-semibold">Opening & access</h2><p className="mt-3 leading-relaxed" style={{color:'var(--text-secondary)'}}>Public streets and outdoor viewpoints have different access arrangements from staffed buildings, museums, workshops or scheduled activities. Check the current local information for this particular stop before setting out.</p></div><div className="rounded-xl p-5" style={{background:'var(--bg-tertiary)'}}><h2 className="font-display text-xl font-semibold">Tickets & costs</h2><p className="mt-3 leading-relaxed" style={{color:'var(--text-secondary)'}}>Costs depend on the venue and activity. Streets and public viewpoints may be freely accessible; exhibitions, tours, workshops and boat trips may have separate prices or reservations. Follow the venue’s own booking instructions.</p></div></section>
     <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Before you go</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>{e.practical}</p><ul className="list-disc pl-6 mt-4 space-y-2" style={{color:'var(--text-secondary)'}}><li>Confirm opening conditions, road access and event restrictions locally before travel.</li><li>Take water and comfortable shoes, especially in warmer months.</li><li>Respect residents, religious spaces, archaeological remains and protected landscapes.</li></ul></section>
     <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Suggested route and nearby stops</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>{e.route}</p><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>Use the place-specific map link above to check your starting point and current route. Travel times depend on where you park and on local road or footpath conditions.</p></section>
-    <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Photography and visitor etiquette</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>Morning and late-afternoon light can bring out the textures of Alentejo stone and countryside. Keep paths clear for other visitors, ask permission before photographing people and never cross barriers for a better angle. In summer, the brightest midday light coincides with the greatest heat.</p></section>
+    <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Getting here and moving around</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>{detail.access}</p><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>If travelling from Évora or Reguengos de Monsaraz, check current public transport connections before relying on them. For rural monuments and waterside activities, a car, taxi or arranged excursion is often more practical than an unplanned walk from the castle.</p></section>
+    <section className="mt-12"><h2 className="font-display text-2xl font-semibold">A simple three-step visit</h2><ol className="list-decimal pl-6 mt-5 space-y-4 leading-8" style={{color:'var(--text-secondary)'}}><li><strong>Orient yourself.</strong> Open the specific Google Maps search above and approach via the permitted entrance or public route.</li><li><strong>Explore deliberately.</strong> {e.experience}</li><li><strong>Continue onward.</strong> {e.route}</li></ol></section>
+    <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Photography spots and best light</h2><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>{detail.photo}</p><p className="mt-4 leading-8" style={{color:'var(--text-secondary)'}}>Morning and late-afternoon light can bring out the textures of Alentejo stone and countryside. Keep paths clear for other visitors, ask permission before photographing people and never cross barriers for a better angle.</p></section>
     <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Frequently asked questions</h2><div className="space-y-5 mt-5">{faq.map(f=><div key={f.q} className="rounded-xl p-5" style={{background:'var(--bg-tertiary)'}}><h3 className="font-semibold">{f.q}</h3><p className="mt-2 leading-relaxed" style={{color:'var(--text-secondary)'}}>{f.a}</p></div>)}</div></section>
     <section className="mt-12"><h2 className="font-display text-2xl font-semibold">Continue exploring</h2><div className="grid sm:grid-cols-3 gap-4 mt-5">{related.map(x=><Link href={`/${locale}/explore/${x.slug}`} key={x.slug} className="p-4 rounded-lg hover:underline" style={{background:'var(--bg-tertiary)',color:'var(--accent)'}}>{x.title} →</Link>)}</div><Link className="inline-block mt-6 underline" href={`/${locale}/explore`}>All Monsaraz visitor guides</Link></section>
     <p className="mt-12 text-xs leading-relaxed" style={{color:'var(--text-muted)'}}>Sources for local context: <a className="underline" href="https://www.visitportugal.com/en/destinos/alentejo/483307" target="_blank" rel="noopener noreferrer">Visit Portugal</a> and <a className="underline" href="https://www.cm-reguengos-monsaraz.pt/" target="_blank" rel="noopener noreferrer">Reguengos de Monsaraz Municipality</a>. Confirm visit-specific arrangements with the relevant operator.</p>
