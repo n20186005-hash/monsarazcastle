@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { entries } from '@/lib/explore';
 
 export const dynamic = 'force-static';
 
@@ -16,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [];
 
   // Homepage (one canonical path per locale).
-  for (const locale of locales) {
+  for (const locale of ['en']) {
     const url = `${baseUrl}/${locale}`;
     const languages: Record<string, string> = {
       pt: `${baseUrl}/pt`,
@@ -53,5 +54,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  for (const locale of locales) {
+    sitemap.push({url:`${baseUrl}/${locale}/explore`,lastModified:new Date('2026-11-11'),changeFrequency:'monthly',priority:0.8});
+    for (const entry of entries) sitemap.push({url:`${baseUrl}/${locale}/explore/${entry.slug}`,lastModified:new Date('2026-11-11'),changeFrequency:'monthly',priority:0.65});
+  }
   return sitemap;
 }
