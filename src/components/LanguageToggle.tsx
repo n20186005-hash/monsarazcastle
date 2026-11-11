@@ -31,7 +31,11 @@ export default function LanguageToggle() {
   function switchLocale(next: Locale) {
     setOpen(false);
     if (next === locale) return;
-    router.replace(pathname, { locale: next });
+    if (pathname.startsWith('/explore/')) {
+      router.replace({pathname: '/explore/[slug]', params: {slug: pathname.split('/').pop() || ''}}, {locale: next});
+      return;
+    }
+    router.replace(pathname as '/', { locale: next });
   }
 
   return (
