@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:worker": "opennextjs-cloudflare build",
+    "deploy:worker": "opennextjs-cloudflare deploy",
     "start": "next start",
     "lint": "next lint",
     "check:i18n": "node scripts/check-i18n.mjs",
@@ -12,6 +14,7 @@
     "optimize:images:pass2": "node scripts/optimize-gallery-pass2.mjs"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.16",
     "next": "^15.1.0",
     "next-intl": "^4.1.0",
     "react": "^19.0.0",
@@ -24,6 +27,7 @@
     "@types/react-dom": "^19.0.0",
     "sharp": "^0.35.4",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "wrangler": "^4.160.0"
   }
 }
